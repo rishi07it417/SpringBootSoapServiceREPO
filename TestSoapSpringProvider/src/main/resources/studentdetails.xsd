@@ -1,0 +1,33 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:tns="http://localhost:8080/studentdetails/ws" 
+targetNamespace="http://localhost:8080/studentdetails/ws"
+elementFormDefault="qualified">
+
+
+
+    <xs:element name="getStudentRequest" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="stuId" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	
+    <xs:element name="getStudentResponse">
+    	<xs:complexType>
+			<xs:sequence>
+				<xs:element name="student" type="tns:uniMaster"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+   
+    <xs:complexType name="uniMaster">
+        <xs:sequence>	           
+            <xs:element name="college" type="xs:string"></xs:element>
+            <xs:element name="student" type="xs:string"></xs:element>
+            <xs:element name="stuId" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
